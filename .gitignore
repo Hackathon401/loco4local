@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,django
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django
 
+# Security key
+main_app/loco4local/secrets_settings.py
+
 ### Django ###
 *.log
 *.pot
