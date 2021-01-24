@@ -1,0 +1,68 @@
+{% extends 'base_search.html' %}
+
+{% block content %}
+<h1>Add A Business</h1>
+<form class="form-inline my-2 my-lg-0" method="POST">
+  {% csrf_token %}
+  <div>
+    <p>Business Name</p>
+    <input class="form-control me-2" type="search" placeholder="Michelle's Bread Churner" 
+    value="" aria-label="Search" name="business_name">
+  </div>
+  <div>
+    <p>Owner Name</p>
+    <input class="form-control me-2" type="search" placeholder="Michelle Wang" 
+    value="" aria-label="Search" name="business_name">
+  </div>
+  <div>
+    <p>Business Address</p>
+    <input class="form-control me-2" type="search" placeholder="456 Riverbend Square" 
+    value="" aria-label="Search" name="business_name">
+  </div>
+  <div>
+    <p>Phone Number</p>
+    <input class="form-control me-2" type="search" placeholder="780-555-1234" 
+    value="" aria-label="Search" name="business_name">
+  </div>
+  <div>
+    <p>Email</p>
+    <input class="form-control me-2" type="search" placeholder="mxwang@ualberta.ca" 
+    value="" aria-label="Search" name="business_name">
+  </div>
+  <div>
+    <p>Email</p>
+    <input class="form-control me-2" type="search" placeholder="Michelle's Bread Churner" 
+    value="" aria-label="Search" name="business_name">
+  </div>
+  <div>
+    <p>Description</p>
+    <textarea class="form-control me-2" name="business_description" rows="4" cols="50" placeholder="I sell bread">
+    </textarea>
+  </div>
+  <div>
+    <p>Available Products</p>
+    <input class="form-control me-2" type="search" placeholder="Bread" 
+    value="" aria-label="Search" name="business_name">
+  </div>
+  <div>
+    <p>Business Category</p>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Categories
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Bakery</a></li>
+        <li><a class="dropdown-item" href="#">Desserts</a></li>
+        <li><a class="dropdown-item" href="#">Media</a></li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <p>Upload pictures</p>
+    <input class="form-control me-2" type="search" placeholder="Michelle's Bread Churner" 
+    value="" aria-label="Search" name="business_name">
+  </div>
+  <input type="hidden" value="saf" name="completed">
+  <button class="btn btn-outline-secondary" type="submit">Save</button>
+</form>
+{% endblock %}
