@@ -36,8 +36,33 @@ class VendorPost(models.Model):
     def __str__(self):
         return self.business_name
 
+    def businessName(self):
+        return self.business_name
+
+    def ownerName(self):
+        return self.owner_name
+    
+    def businessAddress(self):
+        return self.business_address
+    
+    def phoneNumber(self):
+        return self.phone_number
+
+    def email(self):
+        return self.email
+    
+    def description(self):
+        return self.description
+
+    def businessCategory(self):
+        return self.business_category1
+
+    def __str__(self):
+        return self.business_name
+
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
 
 
 
