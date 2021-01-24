@@ -1,0 +1,14 @@
+.card-thumbnail {
+    max-height: 200px;
+    max-width: 300px;
+}
+
+.card-col2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
