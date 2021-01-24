@@ -32,10 +32,6 @@ class VendorPost(models.Model):
     #business_category2 = forms.CharField(label='business category', widget=forms.Select(choices=CATEGORIES))
     photo = models.ImageField(null = True, blank = True)
 
-
-    # def __str__(self):
-    #     return self.business_name
-
     def businessName(self):
         return self.business_name
 
