@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div>
+<div class="container">
   <h1>Michelle's Bread Churner</h1>
   <div class="row">
     <p class="col col-lg-2">Owner Name:</p>
@@ -35,7 +35,7 @@
     <p class="col-md-auto">{{ item.business_address }}</p>
   </div>
   <div>
-    <img src="{% static 'images/BUTTER.jpg' %}">
+    <img src="{{ item.photo.url }}" width="23px" height="10px">
   </div>
 </div>
 {% endblock %}
