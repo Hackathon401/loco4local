@@ -11,3 +11,6 @@ def create_business(request):
 
 def vendor_info(request):
     return render(request, 'vendor_info.html', {})
+
+def business_info(request):
+    return render(request, 'business_info.html', {})

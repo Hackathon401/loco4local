@@ -1,84 +1,31 @@
 {% extends 'base.html' %}
-
-{% block title%}Local4Local{% endblock %}
+{% load static %}
 
 {% block content %}
-<div>
-  <div class="card">
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body">
-
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <!-- srcset = comma-separated list of image links -->
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Rice cake image">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Chelsea's Belly</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>Lip-smacking, belly-filling, southeast Asian fare!</p>
-                </div>
-        </article>
-
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Lids: the sequel">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Lidia's Lids</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>I sell colorful jar lids for ice cream</p>
-                </div>
-        </article>
-
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Big od' block of butter">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Beth's Better Butter</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>I make 12 varieties of butter.</p>
-                </div>
-        </article>
-
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Cat image">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Kathy's Krazy Kat Kafe</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>Do you like Kats?</p>
-                </div>
-        </article>
-
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Seashell image">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Michelle Sells Shells</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>I sell shells</p>
-                </div>
-        </article>
+  <div>
+    <h1>Michelle's Bread Churner</h1>
+    <div>
+      <p>Owner Name:</p>
+      <p>Michelle Wang</p>
+    </div>
+    <div>
+      <p>Email:</p>
+      <p>mx@ualberta.ca</p>
+    </div>
+    <div>
+      <p>Phone number:</p>
+      <p>780-655-1234</p>
+    </div>
+    <div>
+      <p>Description:</p>
+      <p></p>
+    </div>
+    <div>
+      <p>Business Address:</p>
+      <p>1234 12th Street</p>
+    </div>
+    <div>
+      <img src="{% static 'images/BUTTER.jpg' %}">
     </div>
   </div>
-</div>
 {% endblock %}
