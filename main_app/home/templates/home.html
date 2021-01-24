@@ -7,27 +7,125 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
 
+<!--    &lt;!&ndash;Custom Google Fonts&ndash;&gt;-->
+<!--    &lt;!&ndash;-->
+<!--     Note from Katherine: wasn't sure how to import directly to CSS file, so importing it here for now.-->
+<!--     Source: https://developers.google.com/fonts/docs/getting_started-->
+<!--     &ndash;&gt;-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">-->
+<!--    <style>-->
+<!--      h1.header {-->
+<!--        font-family: 'Yusei Magic', serif;-->
+<!--                font-size: 48px;-->
+<!--      }-->
+<!--    </style>-->
+
+<!--TODO remove hardcoding!-->
 <div>
   <div class="container">
+
     <div class="card">
-        <div class="card-body">
-          <div class="row">
+      <div class="card-body">
+        <div class="row">
 
-            <div class="col-sm" id="card-col1">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-
-            <div class="col-sm" id="card-col2">
-              <div>
-                <img class="card-thumbnail" src="{% static 'images/stock-card-1.jpg' %}">
-              </div>
-            </div>
-
+          <div class="col-sm card-col1">
+            <h5 class="card-title">Chelsea's Belly</h5>
+            <p class="card-text">Lip-smacking, belly-filling, southeast Asian fare!</p>
+            <a href="#" class="btn btn-primary">More Info</a>
           </div>
+
+          <div class="col-sm card-col2">
+            <div>
+              <img class="card-thumbnail" src="{% static 'images/malaysian-food-yum.jpg' %}">
+            </div>
+          </div>
+
         </div>
+      </div>
     </div>
+
+        <div class="card">
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-sm card-col1">
+            <h5 class="card-title">Lidia's Lids</h5>
+            <p class="card-text">I sell colorful jar lids for ice cream.</p>
+            <a href="#" class="btn btn-primary">More Info</a>
+          </div>
+
+          <div class="col-sm card-col2">
+            <div>
+              <img class="card-thumbnail" src="{% static 'images/ice-cream.jpg' %}">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+        <div class="card">
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-sm card-col1">
+            <h5 class="card-title">Beth's Better Butter</h5>
+            <p class="card-text">I make 12 varieties of butter.</p>
+            <a href="#" class="btn btn-primary">More Info</a>
+          </div>
+
+          <div class="col-sm card-col2">
+            <div>
+              <img class="card-thumbnail" src="{% static 'images/BUTTER.jpg' %}">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+        <div class="card">
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-sm card-col1">
+            <h5 class="card-title">Kathy's Krazy Kat Kafe</h5>
+            <p class="card-text">Do you like Kats?</p>
+            <a href="#" class="btn btn-primary">More Info</a>
+          </div>
+
+          <div class="col-sm card-col2">
+            <div>
+              <img class="card-thumbnail" src="{% static 'images/cat-cafe.jpg' %}">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+        <div class="card">
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-sm card-col1">
+            <h5 class="card-title">Michelle Sells Shells</h5>
+            <p class="card-text">I sell shells.</p>
+            <a href="#" class="btn btn-primary">More Info</a>
+          </div>
+
+          <div class="col-sm card-col2">
+            <div>
+              <img class="card-thumbnail" src="{% static 'images/shells.jpg' %}">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 {% endblock %}

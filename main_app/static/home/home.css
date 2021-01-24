@@ -1,9 +1,14 @@
 .card-thumbnail {
-    height: 200px;
-    width: 300px;
+    max-height: 200px;
+    max-width: 300px;
 }
 
-#card-col2 {
+.card-col2 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+}
+
+.card {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

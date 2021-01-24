@@ -40,8 +40,8 @@ Includes the city searchbar, the avatar icon, the categories, and the category s
   <body>
 
   <!--Header and dropdown avatar-->
-  <div class="header-and-avatar">
-    <h1 class="header">Loco4Local</h1>
+  <header class="header-and-avatar">
+        <h1 class="header">Loco4Local</h1>
     <div class="dropdown">
       <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
         <img class="avatar-icon" src="{% static 'images/user-solid.svg' %}">
@@ -53,37 +53,43 @@ Includes the city searchbar, the avatar icon, the categories, and the category s
         <li><a class="dropdown-item" href="#">Review App</a></li>
       </ul>
     </div>
-  </div>
+  </header>
 
-  <!--Location filter-->
+  <main>
+    <!--Location filter-->
   <div class="container" id="location-filter-container">
-    <label for="basic-url" class="form-label">Filter by City</label>
+    <label for="basic-url" class="form-label filter-label">Filter by City</label>
     <div class="input-group mb-3">
       <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="City">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
     </div>
   </div>
 
     <!--Tabs-->
   <div class="container" id="category-tabs-and-sections-container">
+      <label for="basic-url" class="form-label filter-label">Filter by Category</label>
+    <div>
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-      <label class="btn btn-outline-primary" for="btnradio1">All</label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn btn-outline-primary" for="btnradio1">All</label>
 
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-      <label class="btn btn-outline-primary" for="btnradio2">Bakery</label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio2">Bakery</label>
 
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-      <label class="btn btn-outline-primary" for="btnradio3">Deserts</label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio3">Deserts</label>
+      </div>
     </div>
       <div class="input-group mb-3">
-      <input type="text" class="form-control"  aria-describedby="basic-addon3" placeholder="City">
-      <button class="btn btn-outline-secondary" type="button" id="category-submit">Button</button>
+      <input type="text" class="form-control"  aria-describedby="basic-addon3" placeholder="Favourite Dishes">
+      <button class="btn btn-outline-secondary" type="button" id="category-submit">Search</button>
     </div>
   </div>
 
     {% block content %}
     {% endblock %}
+  </main>
+
     
     <!-- Optional JavaScript; choose one of the two! -->
 
