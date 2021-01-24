@@ -2,30 +2,40 @@
 {% load static %}
 
 {% block content %}
-  <div>
-    <h1>Michelle's Bread Churner</h1>
-    <div>
-      <p>Owner Name:</p>
-      <p>Michelle Wang</p>
-    </div>
-    <div>
-      <p>Email:</p>
-      <p>mx@ualberta.ca</p>
-    </div>
-    <div>
-      <p>Phone number:</p>
-      <p>780-655-1234</p>
-    </div>
-    <div>
-      <p>Description:</p>
-      <p></p>
-    </div>
-    <div>
-      <p>Business Address:</p>
-      <p>1234 12th Street</p>
-    </div>
-    <div>
-      <img src="{% static 'images/BUTTER.jpg' %}">
-    </div>
+<div>
+  <h1>Michelle's Bread Churner</h1>
+  <div class="row">
+    <p class="col col-lg-2">Owner Name:</p>
+    <p class="col-md-auto">Michelle Wang</p>
   </div>
+  <div class="row">
+    <p class="col col-lg-2">
+      Email:
+    </p>
+    <p class="col-md-auto">
+      mx@ualberta.ca
+    </p>
+  </div>
+  <div class="row">
+    <p class="col col-lg-2">
+      Phone number:
+    </p>
+    <p class="col-md-auto">
+      780-655-1234
+    </p>
+  </div>
+  <div class="row">
+    <p class="col col-lg-2">
+      Description:
+    </p>
+    <p class="col-md-auto"></p>
+  </div>
+  <div class="row">
+    <p class="col col-lg-2">Business Address:</p>
+    <p class="col-md-auto">1234 12th Street</p>
+  </div>
+  <div>
+    <img src="{% static 'images/BUTTER.jpg' %}">
+  </div>
+</div>
 {% endblock %}
