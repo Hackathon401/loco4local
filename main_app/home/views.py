@@ -8,3 +8,6 @@ def index(request):
 
 def create_business(request):
     return render(request, 'create_business.html', {})
+
+def vendor_info(request):
+    return render(request, 'vendor_info.html', {})
