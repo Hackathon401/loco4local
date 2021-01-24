@@ -1,101 +1,162 @@
 {% extends 'base.html' %}
-
 {% block title%}Local4Local{% endblock %}
 
+{% load static %}
+
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/business_info.css' %}">
+
 <div>
-  <div class="card">
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body">
 
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <!--<div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Rice cake image">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Chelsea's Belly</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>DESCRIPTION: {{vendor.business_name}}</p>
-                </div>-->
-                {% if vendors %}
-                    {% for vendor in vendors %}
-                        <div class="excerpt-photo">
-                            <p>
-                                <!-- <a class="excerpt-link" title="Business 1"></a> -->
-                                <img src="/home/{{ vendor.photo}}/" alt="Rice cake image">
-                            </p>
+    <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Edit Infomation</a>
+          <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Businesses</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Settings</a>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                <!-- Put any information here -->
+                  <!-- <div class="overflow-scroll"> -->
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+
+                        <div class="justify-content-start">
+
+                            <article class="article-excerpt">
+                                <div class="excerpt-container">
+                                    <div class="excerpt-photo">
+                                        <p>
+                                            <!-- srcset = comma-separated list of image links -->
+                                            <a class="excerpt-link" title="Business 1"></a>
+                                            <img src="pic_trulli.jpg" alt="Rice cake image">
+                                        </p>
+                                    </div>
+                                    <h2 class="excerpt-title"><a href="" class="excerpt-link">Chelsea's Belly</a></h2>
+                                    <div class="excerpt-excerpt">
+                                        <p>Lip-smacking, belly-filling, southeast Asian fare!</p>
+                                    </div>
+                            </article>
+
+                            <article class="article-excerpt">
+                                <div class="excerpt-container">
+                                    <div class="excerpt-photo">
+                                        <p>
+                                            <a class="excerpt-link" title="Business 1"></a>
+                                            <img src="pic_trulli.jpg" alt="Lids: the sequel">
+                                        </p>
+                                    </div>
+                                    <h2 class="excerpt-title"><a href="" class="excerpt-link">Lidia's Lids</a></h2>
+                                    <div class="excerpt-excerpt">
+                                        <p>I sell colorful jar lids for ice cream</p>
+                                    </div>
+                            </article>
+                        
+                
+                            <article class="article-excerpt">
+                                <div class="excerpt-container">
+                                    <div class="excerpt-photo">
+                                        <p>
+                                            <a class="excerpt-link" title="Business 1"></a>
+                                            <img src="pic_trulli.jpg" alt="Big od' block of butter">
+                                        </p>
+                                    </div>
+                                    <h2 class="excerpt-title"><a href="" class="excerpt-link">Beth's Better Butter</a></h2>
+                                    <div class="excerpt-excerpt">
+                                        <p>I make 12 varieties of butter.</p>
+                                    </div>
+                            </article>
+                    
+                            <article class="article-excerpt">
+                                <div class="excerpt-container">
+                                    <div class="excerpt-photo">
+                                        <p>
+                                            <a class="excerpt-link" title="Business 1"></a>
+                                            <img src="pic_trulli.jpg" alt="Cat image">
+                                        </p>
+                                    </div>
+                                    <h2 class="excerpt-title"><a href="" class="excerpt-link">Kathy's Krazy Kat Kafe</a></h2>
+                                    <div class="excerpt-excerpt">
+                                        <p>Do you like Kats?</p>
+                                    </div>
+                            </article>
+                    
+                            <article class="article-excerpt">
+                                <div class="excerpt-container">
+                                    <div class="excerpt-photo">
+                                        <p>
+                                            <a class="excerpt-link" title="Business 1"></a>
+                                            <img src="pic_trulli.jpg" alt="Seashell image">
+                                        </p>
+                                    </div>
+                                    <h2 class="excerpt-title"><a href="" class="excerpt-link">Michelle Sells Shells</a></h2>
+                                    <div class="excerpt-excerpt">
+                                        <p>I sell shells</p>
+                                    </div>
+                            </article>
+
                         </div>
-                        <!-- <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
-
-                        <h2 class="excerpt-title"><a href="/home/{{ vendor.business_name}}/">{{ vendor.business_name }}</a></h2>
-                        <div class="excerpt-excerpt">
-                            <p>Description: {{vendor.business_name}}</p>
-                        </div>
-                    {% endfor %}
-                {% else %}
-                    <p>No polls are available.</p>
-                {% endif %}
-        
-        </article>
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Lids: the sequel">
-                    </p>
+                    
+                        <div class="container">
+                            <main>
+                              <h1>Business Info</h1>
+                          
+                              <form method="POST">
+                                {% csrf_token %}
+                                <div class="row mb-3">
+                                  <label for="inputEmail3" class="col-sm-2 col-form-label">Business Name</label>
+                                  <div class="col-sm-10">
+                                    <label class="col-sm-2 col-form-label">Lidia's Lids</label>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Owner Name</label>
+                                  <div class="col-sm-10">
+                                    <label class="col-sm-2 col-form-label">Lidia</label>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Business Address</label>
+                                  <div class="col-sm-10">
+                                    <label class="col-sm-2 col-form-label">123 Address </label>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Phone Number</label>
+                                  <div class="col-sm-10">
+                                    <label class="col-sm-2 col-form-label">780-555-1234</label>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+                                  <div class="col-sm-10">
+                                    <label class="col-sm-2 col-form-label">123@gmail.com</label>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Description</label>
+                                  <div class="col-sm-10">
+                                    <label class="col-sm-2 col-form-label">Description</label>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Available Products</label>
+                                  <div class="col-sm-10">
+                                    <label class="col-sm-2 col-form-label">Sample</label>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Picture</label>
+                                  <div class="col-sm-10">
+                                </div>
+                              </form>
+                            </main>
+                          </div>
+                
+                  <!-- </div> -->
                 </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Lidia's Lids</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>I sell colorful jar lids for ice cream</p>
-                </div>
-        </article>
-
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Big od' block of butter">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Beth's Better Butter</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>I make 12 varieties of butter.</p>
-                </div>
-        </article>
-
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Cat image">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Kathy's Krazy Kat Kafe</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>Do you like Kats?</p>
-                </div>
-        </article>
-
-        <article class="article excerpt">
-            <div class="excerpt-container">
-                <div class="excerpt-photo">
-                    <p>
-                        <a class="excerpt-link" title="Business 1"></a>
-                        <img src="pic_trulli.jpg" alt="Seashell image">
-                    </p>
-                </div>
-                <h2 class="excerpt-title"><a href="" class="excerpt-link">Michelle Sells Shells</a></h2>
-                <div class="excerpt-excerpt">
-                    <p>I sell shells</p>
-                </div>
-        </article>
+            </div>
+          </div>
     </div>
-  </div>
-</div>
+
 {% endblock %}
