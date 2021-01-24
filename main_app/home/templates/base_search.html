@@ -3,7 +3,7 @@ Includes the city searchbar, the avatar icon, the categories, and the category s
 -->
 
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'home/base_search.css' %}">
 
 <!doctype html>
 <html lang="en">
@@ -56,69 +56,31 @@ Includes the city searchbar, the avatar icon, the categories, and the category s
   </div>
 
   <!--Location filter-->
-  <label for="basic-url" class="form-label">Filter by City</label>
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="City">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+  <div class="container" id="location-filter-container">
+    <label for="basic-url" class="form-label">Filter by City</label>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="City">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+    </div>
   </div>
-
-<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--    <div class="container-fluid">-->
-<!--&lt;!&ndash;      <a class="navbar-brand" href="#">Local</a>&ndash;&gt;-->
-<!--      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--      </button>-->
-<!--      <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--        <form class="d-flex">-->
-<!--          <input class="form-control me-2" type="search" placeholder="Search City" aria-label="Search">-->
-<!--          <button class="btn btn-outline-success" type="submit">Change Location</button>-->
-<!--        </form>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </nav>-->
-
 
     <!--Tabs-->
-  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-    <label class="btn btn-outline-primary" for="btnradio1">All</label>
+  <div class="container" id="category-tabs-and-sections-container">
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="btnradio1">All</label>
 
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio2">Bakery</label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio2">Bakery</label>
 
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio3">Deserts</label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio3">Deserts</label>
+    </div>
+      <div class="input-group mb-3">
+      <input type="text" class="form-control"  aria-describedby="basic-addon3" placeholder="City">
+      <button class="btn btn-outline-secondary" type="button" id="category-submit">Button</button>
+    </div>
   </div>
-    <div class="input-group mb-3">
-    <input type="text" class="form-control"  aria-describedby="basic-addon3" placeholder="City">
-    <button class="btn btn-outline-secondary" type="button" id="category-submit">Button</button>
-  </div>
-
-
-    <!--TODO: MOVE THIS TO THE CENTER??-->
-<!--    <div>-->
-<!--      <ul class="nav nav-tabs">-->
-<!--        <button class="nav-item">-->
-<!--          <a class="nav-link active" aria-current="page" href="#">All</a>-->
-<!--        </button>-->
-<!--        <button class="nav-item">-->
-<!--          <a class="nav-link" href="#">Bakery</a>-->
-<!--        </button>-->
-<!--        <button class="nav-item">-->
-<!--          <a class="nav-link" href="#">Clothing</a>-->
-<!--        </button>-->
-<!--        <button class="nav-item">-->
-<!--          <a class="nav-link" href="#">Media</a>-->
-<!--        </button>-->
-<!--      </ul>-->
-<!--    </div>-->
-
-<!--    <div>-->
-<!--      <form class="d-flex">-->
-<!--        <input class="form-control me-2" type="search" placeholder="Looking for..." aria-label="Search">-->
-<!--        <button class="btn btn-outline-success" type="submit">Search</button>-->
-<!--      </form>-->
-<!--    </div>-->
 
     {% block content %}
     {% endblock %}

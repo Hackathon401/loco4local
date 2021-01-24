@@ -1,0 +1,9 @@
+.card-thumbnail {
+    height: 200px;
+    width: 300px;
+}
+
+#card-col2 {
+    display: flex;
+    justify-content: center;
+}

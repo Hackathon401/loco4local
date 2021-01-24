@@ -1,20 +1,32 @@
 {% extends 'base_search.html' %}
 {% load static %}
+
 {% block title%}Local4Local{% endblock %}
 
 {% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+
 <div>
-  <div class="card">
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body">
-      <div>
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-      <div>
-        <img class="img-thumbnail" src="{% static 'images/stock-card-1.jpg' %}">
-      </div>
+  <div class="container">
+    <div class="card">
+        <div class="card-body">
+          <div class="row">
+
+            <div class="col-sm" id="card-col1">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+
+            <div class="col-sm" id="card-col2">
+              <div>
+                <img class="card-thumbnail" src="{% static 'images/stock-card-1.jpg' %}">
+              </div>
+            </div>
+
+          </div>
+        </div>
     </div>
   </div>
 </div>
