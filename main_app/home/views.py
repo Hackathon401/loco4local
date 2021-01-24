@@ -14,3 +14,4 @@ def vendor_info(request):
 
 def business_info(request):
     return render(request, 'business_info.html', {})
+
