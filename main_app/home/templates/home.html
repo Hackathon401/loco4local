@@ -42,7 +42,7 @@
           <div class="col-sm card-col1">
             <h5 class="card-title">{{ business.business_name }}</h5>
             <p class="card-text">{{ business.description }}</p>
-            <a href="{% url 'vendor_info' %}" class="btn btn-primary">More Info</a>
+            <a href="{% url 'vendor_info' business.id %}" class="btn btn-primary">More Info</a>
           </div>
 
           <div class="col-sm card-col2">

@@ -15,9 +15,10 @@ def create_business(request):
 def account_info(request):
     return render(request, 'account_info.html', {})
 
-def vendor_info(request):
+def vendor_info(request, list_id):
+    item = VendorPost.objects.get(pk=list_id)
     
-    return render(request, 'vendor_info.html', {})
+    return render(request, 'vendor_info.html', {'item': item})
 
 def business_info(request):
     vendors = VendorPost.objects.all()

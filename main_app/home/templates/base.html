@@ -47,7 +47,7 @@ Includes the city searchbar, the avatar icon, the categories, and the category s
         <img class="avatar-icon" src="{% static 'images/user-solid.svg' %}">
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Account Info</a></li>
+        <li><a class="dropdown-item" href="{% url 'account_info' %}">Account Info</a></li>
         <li><a class="dropdown-item" href="#">Settings</a></li>
         <li><a class="dropdown-item" href="#">Add a Business</a></li>
         <li><a class="dropdown-item" href="#">Review App</a></li>
