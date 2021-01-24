@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'home/create_business.css' %}">
+
 <h1>Add A Business</h1>
 
 <form method="POST">
@@ -45,10 +48,10 @@
   <div  class="row mb-3">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Available Products</label>
     <div class="dropdown col-sm-10">
-      <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn dropdown-toggle create-business-category-dropdown" type="button" id="create-business-category-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
         Categories
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <ul class="dropdown-menu" aria-labelledby="create-business-category-dropdown">
         <li><a class="dropdown-item" href="#">Bakery</a></li>
         <li><a class="dropdown-item" href="#">Desserts</a></li>
         <li><a class="dropdown-item" href="#">Media</a></li>
