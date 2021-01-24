@@ -48,14 +48,14 @@ class VendorPost(models.Model):
     def phoneNumber(self):
         return self.phone_number
 
-    def email(self):
-        return self.email
+    # def email(self):
+    #     return self.email
     
-    def description(self):
-        return self.description
+    # def description(self):
+    #     return self.description
 
-    def businessCategory(self):
-        return self.business_category1
+    # def businessCategory(self):
+    #     return self.business_category1
 
     def __str__(self):
         return self.business_name
