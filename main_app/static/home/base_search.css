@@ -1,13 +1,9 @@
-#dropdownMenuButton {
+#avatar-dropdown {
     height: 70px;
     width: 70px;
     border: none;
     padding: 20px;
     border-radius: 50%;
-}
-
-.dropdown {
-/*margin-right: 100px;*/
 }
 
 .header-and-avatar {

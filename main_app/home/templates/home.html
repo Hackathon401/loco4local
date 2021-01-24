@@ -1,7 +1,17 @@
-{% extends 'base.html' %}
+{% extends 'base_search.html' %}
 {% load static %}
 
 {% block title%}Local4Local{% endblock %}
+
+{% block filter_by_city %}
+<div class="container" id="location-filter-container">
+  <label for="basic-url" class="form-label filter-label">Filter by City</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="City">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+  </div>
+</div>
+{% endblock %}
 
 {% block content %}
 
@@ -25,14 +35,14 @@
 <!--TODO remove hardcoding!-->
 <div>
   <div class="container">
-
+    {% for business in businesses %}
     <div class="card">
       <div class="card-body">
         <div class="row">
 
           <div class="col-sm card-col1">
-            <h5 class="card-title">Chelsea's Belly</h5>
-            <p class="card-text">Lip-smacking, belly-filling, southeast Asian fare!</p>
+            <h5 class="card-title">{{ business.business_name }}</h5>
+            <p class="card-text">{{ business.description }}</p>
             <a href="#" class="btn btn-primary">More Info</a>
           </div>
 
@@ -45,86 +55,7 @@
         </div>
       </div>
     </div>
-
-        <div class="card">
-      <div class="card-body">
-        <div class="row">
-
-          <div class="col-sm card-col1">
-            <h5 class="card-title">Lidia's Lids</h5>
-            <p class="card-text">I sell colorful jar lids for ice cream.</p>
-            <a href="#" class="btn btn-primary">More Info</a>
-          </div>
-
-          <div class="col-sm card-col2">
-            <div>
-              <img class="card-thumbnail" src="{% static 'images/ice-cream.jpg' %}">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-        <div class="card">
-      <div class="card-body">
-        <div class="row">
-
-          <div class="col-sm card-col1">
-            <h5 class="card-title">Beth's Better Butter</h5>
-            <p class="card-text">I make 12 varieties of butter.</p>
-            <a href="#" class="btn btn-primary">More Info</a>
-          </div>
-
-          <div class="col-sm card-col2">
-            <div>
-              <img class="card-thumbnail" src="{% static 'images/BUTTER.jpg' %}">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-        <div class="card">
-      <div class="card-body">
-        <div class="row">
-
-          <div class="col-sm card-col1">
-            <h5 class="card-title">Kathy's Krazy Kat Kafe</h5>
-            <p class="card-text">Do you like Kats?</p>
-            <a href="#" class="btn btn-primary">More Info</a>
-          </div>
-
-          <div class="col-sm card-col2">
-            <div>
-              <img class="card-thumbnail" src="{% static 'images/cat-cafe.jpg' %}">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-        <div class="card">
-      <div class="card-body">
-        <div class="row">
-
-          <div class="col-sm card-col1">
-            <h5 class="card-title">Michelle Sells Shells</h5>
-            <p class="card-text">I sell shells.</p>
-            <a href="#" class="btn btn-primary">More Info</a>
-          </div>
-
-          <div class="col-sm card-col2">
-            <div>
-              <img class="card-thumbnail" src="{% static 'images/shells.jpg' %}">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    {% endfor %}
 
   </div>
 </div>

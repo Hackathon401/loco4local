@@ -33,8 +33,8 @@ class VendorPost(models.Model):
     photo = models.ImageField(null = True, blank = True)
 
 
-    def __str__(self):
-        return self.business_name
+    # def __str__(self):
+    #     return self.business_name
 
     def businessName(self):
         return self.business_name

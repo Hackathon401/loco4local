@@ -5,10 +5,15 @@ from .models import VendorPost
 
 # Create your views here.
 def index(request):
-    return render(request, 'home.html', {})
+    businesses = VendorPost.objects.all
+    context = {'businesses': businesses}
+    return render(request, 'home.html', context)
 
 def create_business(request):
     return render(request, 'create_business.html', {})
+
+def account_info(request):
+    return render(request, 'account_info.html', {})
 
 def vendor_info(request):
     
