@@ -3,6 +3,16 @@
 
 {% block title%}Local4Local{% endblock %}
 
+{% block filter_by_city %}
+<div class="container" id="location-filter-container">
+  <label for="basic-url" class="form-label filter-label">Filter by City</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="City">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+  </div>
+</div>
+{% endblock %}
+
 {% block content %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
