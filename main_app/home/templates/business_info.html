@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title%}Local4Local{% endblock %}
+
+{% block content %}
+<div>
+  <div class="card">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+
+        <article class="article excerpt">
+            <div class="excerpt-container">
+                <!--<div class="excerpt-photo">
+                    <p>
+                        <a class="excerpt-link" title="Business 1"></a>
+                        <img src="pic_trulli.jpg" alt="Rice cake image">
+                    </p>
+                </div>
+                <h2 class="excerpt-title"><a href="" class="excerpt-link">Chelsea's Belly</a></h2>
+                <div class="excerpt-excerpt">
+                    <p>DESCRIPTION: {{vendor.business_name}}</p>
+                </div>-->
+                {% if vendors %}
+                    {% for vendor in vendors %}
+                        <div class="excerpt-photo">
+                            <p>
+                                <!-- <a class="excerpt-link" title="Business 1"></a> -->
+                                <img src="/home/{{ vendor.photo}}/" alt="Rice cake image">
+                            </p>
+                        </div>
+                        <!-- <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
+
+                        <h2 class="excerpt-title"><a href="/home/{{ vendor.business_name}}/">{{ vendor.business_name }}</a></h2>
+                        <div class="excerpt-excerpt">
+                            <p>Description: {{vendor.business_name}}</p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No polls are available.</p>
+                {% endif %}
+        
+        </article>
+        <article class="article excerpt">
+            <div class="excerpt-container">
+                <div class="excerpt-photo">
+                    <p>
+                        <a class="excerpt-link" title="Business 1"></a>
+                        <img src="pic_trulli.jpg" alt="Lids: the sequel">
+                    </p>
+                </div>
+                <h2 class="excerpt-title"><a href="" class="excerpt-link">Lidia's Lids</a></h2>
+                <div class="excerpt-excerpt">
+                    <p>I sell colorful jar lids for ice cream</p>
+                </div>
+        </article>
+
+        <article class="article excerpt">
+            <div class="excerpt-container">
+                <div class="excerpt-photo">
+                    <p>
+                        <a class="excerpt-link" title="Business 1"></a>
+                        <img src="pic_trulli.jpg" alt="Big od' block of butter">
+                    </p>
+                </div>
+                <h2 class="excerpt-title"><a href="" class="excerpt-link">Beth's Better Butter</a></h2>
+                <div class="excerpt-excerpt">
+                    <p>I make 12 varieties of butter.</p>
+                </div>
+        </article>
+
+        <article class="article excerpt">
+            <div class="excerpt-container">
+                <div class="excerpt-photo">
+                    <p>
+                        <a class="excerpt-link" title="Business 1"></a>
+                        <img src="pic_trulli.jpg" alt="Cat image">
+                    </p>
+                </div>
+                <h2 class="excerpt-title"><a href="" class="excerpt-link">Kathy's Krazy Kat Kafe</a></h2>
+                <div class="excerpt-excerpt">
+                    <p>Do you like Kats?</p>
+                </div>
+        </article>
+
+        <article class="article excerpt">
+            <div class="excerpt-container">
+                <div class="excerpt-photo">
+                    <p>
+                        <a class="excerpt-link" title="Business 1"></a>
+                        <img src="pic_trulli.jpg" alt="Seashell image">
+                    </p>
+                </div>
+                <h2 class="excerpt-title"><a href="" class="excerpt-link">Michelle Sells Shells</a></h2>
+                <div class="excerpt-excerpt">
+                    <p>I sell shells</p>
+                </div>
+        </article>
+    </div>
+  </div>
+</div>
+{% endblock %}

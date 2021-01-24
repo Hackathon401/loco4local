@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1>Michelle's Bread Churner</h1>
+  <div class="row">
+    <p class="col col-lg-2">Owner Name:</p>
+    <p class="col-md-auto">{{ item.owner_name }}</p>
+  </div>
+  <div class="row">
+    <p class="col col-lg-2">
+      Email:
+    </p>
+    <p class="col-md-auto">
+      {{ item.email }}
+    </p>
+  </div>
+  <div class="row">
+    <p class="col col-lg-2">
+      Phone number:
+    </p>
+    <p class="col-md-auto">
+      {{ item.phone_number }}
+    </p>
+  </div>
+  <div class="row">
+    <p class="col col-lg-2">
+      Description:
+    </p>
+    <p class="col-md-auto">{{ item.description }}</p>
+  </div>
+  <div class="row">
+    <p class="col col-lg-2">Business Address:</p>
+    <p class="col-md-auto">{{ item.business_address }}</p>
+  </div>
+  <div>
+    <img src="{{ item.photo.url }}" width="23px" height="10px">
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base_search.html' %}
+{% load static %}
+
+{% block title%}Local4Local{% endblock %}
+
+{% block filter_by_city %}
+<div class="container" id="location-filter-container">
+  <label for="basic-url" class="form-label filter-label">Filter by City</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="City">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+
+<!--    &lt;!&ndash;Custom Google Fonts&ndash;&gt;-->
+<!--    &lt;!&ndash;-->
+<!--     Note from Katherine: wasn't sure how to import directly to CSS file, so importing it here for now.-->
+<!--     Source: https://developers.google.com/fonts/docs/getting_started-->
+<!--     &ndash;&gt;-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">-->
+<!--    <style>-->
+<!--      h1.header {-->
+<!--        font-family: 'Yusei Magic', serif;-->
+<!--                font-size: 48px;-->
+<!--      }-->
+<!--    </style>-->
+
+<div>
+  <div class="container">
+    {% for business in businesses %}
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-sm card-col1">
+            <h5 class="card-title">{{ business.business_name }}</h5>
+            <p class="card-text">{{ business.description }}</p>
+            <a href="{% url 'vendor_info' business.id %}" class="btn btn-primary">More Info</a>
+          </div>
+
+          <div class="col-sm card-col2">
+            <div>
+              <img class="card-thumbnail" src="{{ business.photo.url }}">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+{% endblock %}
