@@ -10,19 +10,36 @@
 
         <article class="article excerpt">
             <div class="excerpt-container">
-                <div class="excerpt-photo">
+                <!--<div class="excerpt-photo">
                     <p>
-                        <!-- srcset = comma-separated list of image links -->
                         <a class="excerpt-link" title="Business 1"></a>
                         <img src="pic_trulli.jpg" alt="Rice cake image">
                     </p>
                 </div>
                 <h2 class="excerpt-title"><a href="" class="excerpt-link">Chelsea's Belly</a></h2>
                 <div class="excerpt-excerpt">
-                    <p>Lip-smacking, belly-filling, southeast Asian fare!</p>
-                </div>
-        </article>
+                    <p>DESCRIPTION: {{vendor.business_name}}</p>
+                </div>-->
+                {% if vendors %}
+                    {% for vendor in vendors %}
+                        <div class="excerpt-photo">
+                            <p>
+                                <!-- <a class="excerpt-link" title="Business 1"></a> -->
+                                <img src="/home/{{ vendor.photo}}/" alt="Rice cake image">
+                            </p>
+                        </div>
+                        <!-- <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
 
+                        <h2 class="excerpt-title"><a href="/home/{{ vendor.business_name}}/">{{ vendor.business_name }}</a></h2>
+                        <div class="excerpt-excerpt">
+                            <p>Description: {{vendor.business_name}}</p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No polls are available.</p>
+                {% endif %}
+        
+        </article>
         <article class="article excerpt">
             <div class="excerpt-container">
                 <div class="excerpt-photo">

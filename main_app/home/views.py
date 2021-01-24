@@ -15,7 +15,8 @@ def vendor_info(request):
     return render(request, 'vendor_info.html', {})
 
 def business_info(request):
-    vendor = VendorPost.objects.all()
-    context = {'vendor':vendor}
+    vendors = VendorPost.objects.all()
+
+    context = {'vendor':vendors}
     return render(request, 'business_info.html', context)
 
